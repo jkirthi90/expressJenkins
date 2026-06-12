@@ -26,7 +26,7 @@ pipeline {
 
         stage('Build Docker Image') {
             when {
-                branch 'main'
+                branch 'master'
             }
             steps {
                 echo 'Building Docker image...'
@@ -36,7 +36,7 @@ pipeline {
 
         stage('Push to DockerHub') {
             when {
-                branch ‘master’
+                branch 'master'
             }
             steps {
                 withCredentials([usernamePassword(
